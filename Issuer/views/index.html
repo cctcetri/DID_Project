@@ -93,7 +93,7 @@
                 console.log(tx)
 
                 // 3. 트랜잭션 서명
-                let privateKey = new ethereumjs.Buffer.Buffer('713698cbaf055c391e612b736f39bfa8cc6c345a4f196450b15a72b01fa8ada2','hex')
+                let privateKey = new ethereumjs.Buffer.Buffer('713698cbaf055c391e612b736f39bfa8cc6c345a4f196450b15a72b01fa8ada2','hex') // aes로 암호화한 private key (cypher text 부분)
                 tx.sign(privateKey)
 
                 // 4. 트랜잭션 전송하기
