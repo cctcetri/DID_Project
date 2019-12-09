@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Provider_part</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../public/css/style.css" type="text/css" />
+    <script src="https://code.jquery.com/jquery-latest.js "></script>
+    <script type="text/javascript" src="../lib/web3.js"></script>
+    <script type="text/javascript" src="../public/js/qrcode.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () { // body 부분 먼저 훑고 올라와!
+            let DEBUG = 1
+            console.log('starting...')
+            //connect web3 and check if web3 is connected correctly
+            if (typeof web3 !== 'undefined') {
+                web3 = new Web3(web3.currentProvider)
+            } else {
+                // set the provider you want from Web3.providers
+                web3 = new Web3(
+                    new Web3.providers.HttpProvider('http://localhost:8545')
+                )
+            }
+
+            if (web3.isConnected()) {
+                console.log('connected')
+            } else {
+                console.log('not connected')
+                exit
+            }
+
+            // 컨트랙트 배포 한다면 밑에 두줄에 하면 됨.
+            // var contractAddress = '0x47cdf0e64e5fd1b8d824a7465874b569251dae19'
+            // var vc = web3.eth.contract(abi).at(contractAddress)
+
+            // qrcode 만드는 부분 여기에 복사 붙여넣기 함
+            let qrcode = new QRCode(document.getElementById('qrcode'), {
+                width: 250,
+                height: 250,
+            })
+
+            function makeCode() {
+                let addr = document.getElementById('fromaddress')
+                if (!addr.value) {
+                    alert('Input a text')
+                    addr.focus()
+                    return
+                }
+                qrcode.makeCode(addr.value)
+            }
+
+            $('#qrcodeBtn').on('click', function () {
+                if (DEBUG) console.log('qrcodeBtn')
+                makeCode()
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <h1>Identification</h1>
+    <div>
+        <!-- <input type="text" id="fromaddress" value="성인여부" /> -->
+        <button id="qrcodeBtn">확인</button>
+        <h5>did 주소 <input id="fromaddress" size="45" placeholder=""></input> </h5>
+    </div>
+    <hr>
+    <div class="container " role="main">
+        <div id="qrcode" style="width:250px; height:250px; margin-top:15px;"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+INFO [12-03|14:35:36.706] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [12-03|14:35:36.953] Starting peer-to-peer node               instance=Geth/v1.9.6-stable-bd059680/windows-amd64/go1.13
+INFO [12-03|14:35:36.953] Allocated trie memory caches             clean=256.00MiB dirty=256.00MiB
+INFO [12-03|14:35:36.953] Allocated cache and file handles         database=C:\\Users\\thddn\\AppData\\Local\\Ethereum\\geth\\chaindata cache=512.00MiB handles=8192
+INFO [12-03|14:35:36.996] Opened ancient database                  database=C:\\Users\\thddn\\AppData\\Local\\Ethereum\\geth\\chaindata\\ancient
+INFO [12-03|14:35:36.999] Initialised chain configuration          config="{ChainID: 15 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 15 EIP158: 0 Byzantium: <nil> Constantinople: <nil> Petersburg: <nil> Istanbul: <nil> Engine: unknown}"
+INFO [12-03|14:35:36.999] Disk storage enabled for ethash caches   dir=C:\\Users\\thddn\\AppData\\Local\\Ethereum\\geth\\ethash count=3
+INFO [12-03|14:35:36.999] Disk storage enabled for ethash DAGs     dir=C:\\Users\\thddn\\AppData\\Local\\Ethash count=2
+INFO [12-03|14:35:36.999] Initialising Ethereum protocol           versions=[63] network=15 dbversion=7
+INFO [12-03|14:35:37.065] Loaded most recent local header          number=76 hash=1002d9…fad6d4 td=10145396 age=6d21h19m
+INFO [12-03|14:35:37.065] Loaded most recent local full block      number=76 hash=1002d9…fad6d4 td=10145396 age=6d21h19m
+INFO [12-03|14:35:37.065] Loaded most recent local fast block      number=76 hash=1002d9…fad6d4 td=10145396 age=6d21h19m
+INFO [12-03|14:35:37.066] Loaded local transaction journal         transactions=0 dropped=0
+INFO [12-03|14:35:37.071] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [12-03|14:35:37.071] Switch sync mode from fast sync to full sync 
+INFO [12-03|14:35:37.109] New local node record                    seq=4 id=c83ad699d583129b ip=127.0.0.1 udp=0 tcp=30303
+INFO [12-03|14:35:37.109] Started P2P networking                   self="enode://1897a27c8e6257440f90606af9ef0818ca5e6fd25e733e6690b32ecd19a883a39379841e83cd4a122adba335099103c8f003316e6abcbb824ccce36fbd581fa9@127.0.0.1:30303?discport=0"
+INFO [12-03|14:35:37.109] IPC endpoint opened                      url=\\\\.\\pipe\\geth.ipc
+INFO [12-03|14:35:37.111] HTTP endpoint opened                     url=http://0.0.0.0:8545   cors=* vhosts=localhost
+INFO [12-03|14:35:37.221] Etherbase automatically configured       address=0xF912eab5d7CFCb3F762CA5F53C057Ca360b9dc45
+INFO [12-03|14:36:59.604] Updated mining threads                   threads=8
+INFO [12-03|14:36:59.604] Transaction pool price threshold updated price=1000000000
+INFO [12-03|14:36:59.605] Commit new mining work                   number=77 sealhash=c072b6…c5954a uncles=0 txs=0 gas=0 fees=0 elapsed=0s
+INFO [12-03|14:37:20.639] Successfully sealed new block            number=77 sealhash=c072b6…c5954a hash=6aea93…877e9a elapsed=21.033s
+INFO [12-03|14:37:20.647] 🔨 mined potential block                  number=77 hash=6aea93…877e9a
+INFO [12-03|14:37:20.657] Commit new mining work                   number=78 sealhash=c603e5…f5907f uncles=0 txs=0 gas=0 fees=0 elapsed=9.002ms
+INFO [12-03|14:37:22.355] Successfully sealed new block            number=78 sealhash=c603e5…f5907f hash=124ea8…634929 elapsed=1.698s
+INFO [12-03|14:37:22.358] 🔨 mined potential block                  number=78 hash=124ea8…634929
+INFO [12-03|14:37:22.359] Commit new mining work                   number=79 sealhash=141072…fa67c5 uncles=0 txs=0 gas=0 fees=0 elapsed=1.999ms
+INFO [12-03|14:37:22.485] Successfully sealed new block            number=79 sealhash=141072…fa67c5 hash=98eb6e…bd439a elapsed=126.013ms
+INFO [12-03|14:37:22.485] 🔨 mined potential block                  number=79 hash=98eb6e…bd439a
+INFO [12-03|14:37:22.486] Commit new mining work                   number=80 sealhash=a15554…a2a149 uncles=0 txs=0 gas=0 fees=0 elapsed=995.9µs
+INFO [12-03|14:37:22.932] Successfully sealed new block            number=80 sealhash=a15554…a2a149 hash=293bdb…080a71 elapsed=446.034ms
+INFO [12-03|14:37:22.932] 🔨 mined potential block                  number=80 hash=293bdb…080a71
+INFO [12-03|14:37:22.932] Mining too far in the future             wait=2s
+INFO [12-03|14:37:24.933] Commit new mining work                   number=81 sealhash=4d9a68…1aaa28 uncles=0 txs=0 gas=0 fees=0 elapsed=2.001s
+INFO [12-03|14:37:25.236] Successfully sealed new block            number=81 sealhash=4d9a68…1aaa28 hash=b096de…1b000a elapsed=303.026ms
+INFO [12-03|14:37:25.236] 🔨 mined potential block                  number=81 hash=b096de…1b000a
+INFO [12-03|14:37:25.237] Commit new mining work                   number=82 sealhash=ff4d54…1b03a0 uncles=0 txs=0 gas=0 fees=0 elapsed=998µs
+INFO [12-03|14:37:25.745] Successfully sealed new block            number=82 sealhash=ff4d54…1b03a0 hash=fbcf25…f9a7c0 elapsed=508.041ms
+INFO [12-03|14:37:25.745] 🔨 mined potential block                  number=82 hash=fbcf25…f9a7c0
+INFO [12-03|14:37:25.746] Commit new mining work                   number=83 sealhash=17759f…377d33 uncles=0 txs=0 gas=0 fees=0 elapsed=995.9µs
+INFO [12-03|14:37:25.997] Successfully sealed new block            number=83 sealhash=17759f…377d33 hash=db097a…71110e elapsed=251.022ms
+INFO [12-03|14:37:25.998] 🔨 mined potential block                  number=83 hash=db097a…71110e
+INFO [12-03|14:37:25.998] Mining too far in the future             wait=2s
+WARN [12-03|14:37:55.440] Failed account unlock attempt            address=0xF912eab5d7CFCb3F762CA5F53C057Ca360b9dc45 err="could not decrypt key with given password"
+WARN [12-03|14:37:55.441] Served personal_unlockAccount            reqid=21 t=825.0716ms err="could not decrypt key with given password"
+INFO [12-03|15:35:37.086] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-03|16:35:37.084] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-03|18:02:46.651] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-03|18:35:37.077] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-03|19:35:37.088] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-03|20:35:37.079] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-03|21:35:37.080] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-03|22:35:37.079] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-04|00:23:33.529] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-04|03:26:48.047] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-04|09:29:41.407] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-04|09:35:37.077] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-04|10:26:37.318] HTTP endpoint closed                     url=http://0.0.0.0:8545
+INFO [12-04|10:26:37.320] IPC endpoint closed                      url=\\\\.\\pipe\\geth.ipc
+INFO [12-04|10:26:37.325] Writing cached state to disk             block=83 hash=db097a…71110e root=d846e1…1ff880
+INFO [12-04|10:26:37.334] Persisted trie from memory database      nodes=1 size=149.00B time=7.0006ms gcnodes=0 gcsize=0.00B gctime=0s livenodes=7 livesize=894.00B
+INFO [12-04|10:26:37.335] Writing cached state to disk             block=82 hash=fbcf25…f9a7c0 root=629cac…ee4830
+INFO [12-04|10:26:37.336] Persisted trie from memory database      nodes=1 size=149.00B time=999.7µs  gcnodes=0 gcsize=0.00B gctime=0s livenodes=6 livesize=745.00B
+INFO [12-04|10:26:37.338] Blockchain manager stopped 
+INFO [12-04|10:26:37.338] Stopping Ethereum protocol 
+INFO [12-04|10:26:37.339] Ethereum protocol stopped 
+INFO [12-04|10:26:37.339] Transaction pool stopped 
+INFO [12-04|10:51:07.842] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [12-04|10:51:08.277] Starting peer-to-peer node               instance=Geth/v1.9.6-stable-bd059680/windows-amd64/go1.13
+INFO [12-04|10:51:08.277] Allocated trie memory caches             clean=256.00MiB dirty=256.00MiB
+INFO [12-04|10:51:08.277] Allocated cache and file handles         database=C:\\Users\\thddn\\AppData\\Local\\Ethereum\\geth\\chaindata cache=512.00MiB handles=8192
+INFO [12-04|10:51:08.343] Opened ancient database                  database=C:\\Users\\thddn\\AppData\\Local\\Ethereum\\geth\\chaindata\\ancient
+INFO [12-04|10:51:08.345] Initialised chain configuration          config="{ChainID: 15 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 15 EIP158: 0 Byzantium: <nil> Constantinople: <nil> Petersburg: <nil> Istanbul: <nil> Engine: unknown}"
+INFO [12-04|10:51:08.345] Disk storage enabled for ethash caches   dir=C:\\Users\\thddn\\AppData\\Local\\Ethereum\\geth\\ethash count=3
+INFO [12-04|10:51:08.345] Disk storage enabled for ethash DAGs     dir=C:\\Users\\thddn\\AppData\\Local\\Ethash count=2
+INFO [12-04|10:51:08.345] Initialising Ethereum protocol           versions=[63] network=15 dbversion=7
+INFO [12-04|10:51:08.436] Loaded most recent local header          number=83 hash=db097a…71110e td=11063860 age=20h13m42s
+INFO [12-04|10:51:08.436] Loaded most recent local full block      number=83 hash=db097a…71110e td=11063860 age=20h13m42s
+INFO [12-04|10:51:08.436] Loaded most recent local fast block      number=83 hash=db097a…71110e td=11063860 age=20h13m42s
+INFO [12-04|10:51:08.438] Loaded local transaction journal         transactions=0 dropped=0
+INFO [12-04|10:51:08.445] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [12-04|10:51:08.445] Switch sync mode from fast sync to full sync 
+INFO [12-04|10:51:08.513] New local node record                    seq=6 id=c83ad699d583129b ip=127.0.0.1 udp=0 tcp=30303
+INFO [12-04|10:51:08.514] Started P2P networking                   self="enode://1897a27c8e6257440f90606af9ef0818ca5e6fd25e733e6690b32ecd19a883a39379841e83cd4a122adba335099103c8f003316e6abcbb824ccce36fbd581fa9@127.0.0.1:30303?discport=0"
+INFO [12-04|10:51:08.515] IPC endpoint opened                      url=\\\\.\\pipe\\geth.ipc
+INFO [12-04|10:51:08.533] IPC endpoint closed                      url=\\\\.\\pipe\\geth.ipc
+INFO [12-04|10:51:08.534] Writing cached state to disk             block=83 hash=db097a…71110e root=d846e1…1ff880
+INFO [12-04|10:51:08.534] Persisted trie from memory database      nodes=0 size=0.00B time=0s gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [12-04|10:51:08.534] Writing cached state to disk             block=82 hash=fbcf25…f9a7c0 root=629cac…ee4830
+INFO [12-04|10:51:08.534] Persisted trie from memory database      nodes=0 size=0.00B time=0s gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [12-04|10:51:08.534] Blockchain manager stopped 
+INFO [12-04|10:51:08.534] Stopping Ethereum protocol 
+INFO [12-04|10:51:08.534] Ethereum protocol stopped 
+INFO [12-04|10:51:08.534] Transaction pool stopped 
+INFO [12-04|10:53:38.034] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [12-04|10:53:38.354] Starting peer-to-peer node               instance=Geth/v1.9.6-stable-bd059680/windows-amd64/go1.13
+INFO [12-04|10:53:38.354] Allocated trie memory caches             clean=256.00MiB dirty=256.00MiB
+INFO [12-04|10:53:38.355] Allocated cache and file handles         database=C:\\Users\\thddn\\AppData\\Local\\Ethereum\\geth\\chaindata cache=512.00MiB handles=8192
+INFO [12-04|10:53:38.415] Opened ancient database                  database=C:\\Users\\thddn\\AppData\\Local\\Ethereum\\geth\\chaindata\\ancient
+INFO [12-04|10:53:38.419] Initialised chain configuration          config="{ChainID: 15 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 15 EIP158: 0 Byzantium: <nil> Constantinople: <nil> Petersburg: <nil> Istanbul: <nil> Engine: unknown}"
+INFO [12-04|10:53:38.419] Disk storage enabled for ethash caches   dir=C:\\Users\\thddn\\AppData\\Local\\Ethereum\\geth\\ethash count=3
+INFO [12-04|10:53:38.419] Disk storage enabled for ethash DAGs     dir=C:\\Users\\thddn\\AppData\\Local\\Ethash count=2
+INFO [12-04|10:53:38.419] Initialising Ethereum protocol           versions=[63] network=15 dbversion=7
+INFO [12-04|10:53:38.512] Loaded most recent local header          number=83 hash=db097a…71110e td=11063860 age=20h16m12s
+INFO [12-04|10:53:38.512] Loaded most recent local full block      number=83 hash=db097a…71110e td=11063860 age=20h16m12s
+INFO [12-04|10:53:38.512] Loaded most recent local fast block      number=83 hash=db097a…71110e td=11063860 age=20h16m12s
+INFO [12-04|10:53:38.514] Loaded local transaction journal         transactions=0 dropped=0
+INFO [12-04|10:53:38.522] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [12-04|10:53:38.522] Switch sync mode from fast sync to full sync 
+INFO [12-04|10:53:38.576] New local node record                    seq=7 id=c83ad699d583129b ip=127.0.0.1 udp=0 tcp=30303
+INFO [12-04|10:53:38.576] Started P2P networking                   self="enode://1897a27c8e6257440f90606af9ef0818ca5e6fd25e733e6690b32ecd19a883a39379841e83cd4a122adba335099103c8f003316e6abcbb824ccce36fbd581fa9@127.0.0.1:30303?discport=0"
+INFO [12-04|10:53:38.578] IPC endpoint opened                      url=\\\\.\\pipe\\geth.ipc
+INFO [12-04|10:53:38.597] IPC endpoint closed                      url=\\\\.\\pipe\\geth.ipc
+INFO [12-04|10:53:38.597] Writing cached state to disk             block=83 hash=db097a…71110e root=d846e1…1ff880
+INFO [12-04|10:53:38.597] Persisted trie from memory database      nodes=0 size=0.00B time=0s gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [12-04|10:53:38.598] Writing cached state to disk             block=82 hash=fbcf25…f9a7c0 root=629cac…ee4830
+INFO [12-04|10:53:38.598] Persisted trie from memory database      nodes=0 size=0.00B time=0s gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [12-04|10:53:38.598] Blockchain manager stopped 
+INFO [12-04|10:53:38.598] Stopping Ethereum protocol 
+INFO [12-04|10:53:38.598] Ethereum protocol stopped 
+INFO [12-04|10:53:38.598] Transaction pool stopped 
+INFO [12-04|10:59:30.854] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [12-04|10:59:31.260] Starting peer-to-peer node               instance=Geth/v1.9.6-stable-bd059680/windows-amd64/go1.13
+INFO [12-04|10:59:31.260] Allocated trie memory caches             clean=256.00MiB dirty=256.00MiB
+INFO [12-04|10:59:31.261] Allocated cache and file handles         database=C:\\Users\\thddn\\AppData\\Local\\Ethereum\\geth\\chaindata cache=512.00MiB handles=8192
+INFO [12-04|10:59:31.329] Opened ancient database                  database=C:\\Users\\thddn\\AppData\\Local\\Ethereum\\geth\\chaindata\\ancient
+INFO [12-04|10:59:31.333] Initialised chain configuration          config="{ChainID: 15 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 15 EIP158: 0 Byzantium: <nil> Constantinople: <nil> Petersburg: <nil> Istanbul: <nil> Engine: unknown}"
+INFO [12-04|10:59:31.333] Disk storage enabled for ethash caches   dir=C:\\Users\\thddn\\AppData\\Local\\Ethereum\\geth\\ethash count=3
+INFO [12-04|10:59:31.333] Disk storage enabled for ethash DAGs     dir=C:\\Users\\thddn\\AppData\\Local\\Ethash count=2
+INFO [12-04|10:59:31.333] Initialising Ethereum protocol           versions=[63] network=15 dbversion=7
+INFO [12-04|10:59:31.449] Loaded most recent local header          number=83 hash=db097a…71110e td=11063860 age=20h22m5s
+INFO [12-04|10:59:31.450] Loaded most recent local full block      number=83 hash=db097a…71110e td=11063860 age=20h22m5s
+INFO [12-04|10:59:31.450] Loaded most recent local fast block      number=83 hash=db097a…71110e td=11063860 age=20h22m5s
+INFO [12-04|10:59:31.452] Loaded local transaction journal         transactions=0 dropped=0
+INFO [12-04|10:59:31.460] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [12-04|10:59:31.460] Switch sync mode from fast sync to full sync 
+INFO [12-04|10:59:31.523] New local node record                    seq=8 id=c83ad699d583129b ip=127.0.0.1 udp=0 tcp=30303
+INFO [12-04|10:59:31.524] Started P2P networking                   self="enode://1897a27c8e6257440f90606af9ef0818ca5e6fd25e733e6690b32ecd19a883a39379841e83cd4a122adba335099103c8f003316e6abcbb824ccce36fbd581fa9@127.0.0.1:30303?discport=0"
+INFO [12-04|10:59:31.525] IPC endpoint opened                      url=\\\\.\\pipe\\geth.ipc
+INFO [12-04|10:59:31.527] HTTP endpoint opened                     url=http://0.0.0.0:8545   cors=* vhosts=localhost
+INFO [12-04|10:59:31.707] Etherbase automatically configured       address=0xF912eab5d7CFCb3F762CA5F53C057Ca360b9dc45

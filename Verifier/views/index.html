@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Verifier_part</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../public/css/style.css" type="text/css" />
+    <script type="text/javascript" src="../public/js/instascan.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js "></script>
+    <script type="text/javascript" src="../lib/web3.js"></script>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+        let DEBUG = 1
+            console.log('starting...')
+            //connect web3 and check if web3 is connected correctly
+            if (typeof web3 !== 'undefined') {
+                web3 = new Web3(web3.currentProvider)
+            } else {
+                // set the provider you want from Web3.providers
+                web3 = new Web3(
+                    new Web3.providers.HttpProvider('http://localhost:8545')
+                )
+            }
+
+            if (web3.isConnected()) {
+                console.log('connected')
+            } else {
+                console.log('not connected')
+                exit
+            }
+
+		let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+		
+		scanner.addListener('scan', function (content) {
+            console.log(content);
+			$('#message').text( content );
+			
+			let toString = content.toString();
+			console.log("product: " + toString);
+			let strArray = toString.split(",");
+			let address = strArray[0];
+			let privatekey = strArray[1];
+						
+			$('#fromaddress').val(address);
+			$('#prikey').val(privatekey);		
+		});
+		
+		Instascan.Camera.getCameras().then(function (cameras) {
+			if (cameras.length > 0) {
+				scanner.start(cameras[0]);
+			} else {
+			console.error('No cameras found.');
+			}
+		}).catch(function (e) {
+			console.error(e);
+		})
+	  })
+    </script>
+  </head>
+  
+  <body>
+    <div class='col-md-5'>
+    <video id="preview"></video>
+	<h5>확인<input id="fromaddress" size="45" placeholder=""></input></h5> <!--qrcode 붙여넣은 부분--> 
+    </div>
+    <div class="container " role="main">
+	<h4><strong> Message </strong></h4>
+    <div id="message"></div>
+  </div>
+  </body>
+</html>
