@@ -12,28 +12,29 @@
     <script type="text/javascript" src="../privateKeystore/issuer1/IS1_privatekey.js"></script>
 
 
-	<script type="text/javascript">
+    <script type="text/javascript">
+    // 이 밑 2줄은 body 부분을 먼저 읽고 올라오라는 의미 이 코드상에서 이 2줄을 사용하면 오류! showList() 함수 정의가 헤드 부분에 있기 때문!
 	// $(document).ready(function(){
     //     let DEBUG = 1
-            console.log('starting...')
-            //connect web3 and check if web3 is connected correctly
-            if (typeof web3 !== 'undefined') {
-                web3 = new Web3(web3.currentProvider)
-            } else {
-                // set the provider you want from Web3.providers
-                web3 = new Web3(
-                    new Web3.providers.HttpProvider("http://localhost:8545")
-                )
-            }
+        console.log('starting...')
+        //connect web3 and check if web3 is connected correctly
+        if (typeof web3 !== 'undefined') {
+            web3 = new Web3(web3.currentProvider)
+        } else {
+            // set the provider you want from Web3.providers
+            web3 = new Web3(
+                new Web3.providers.HttpProvider("http://localhost:8545")
+            )
+        }
 
-            if (web3.isConnected()) {
-                console.log('connected')
-            } else {
-                console.log('not connected')
-                exit
-            }
+        if (web3.isConnected()) {
+            console.log('connected')
+        } else {
+            console.log('not connected')
+            exit
+        }
             
-        var contractAddress = "0xcb227bb17c87e03e2136ee8430ec670ac0384220";
+        var contractAddress = "0x9c412e6e52f55c466c3635696f319bd52e2efdbd";
         var vc = web3.eth.contract(abi).at(contractAddress);
 
 		let listevent = vc.Instructor();  // // smartContract value = Coursetro.Instructor() , event define
@@ -47,18 +48,18 @@
 		});  // end of listevent.watch(function(error, result){
 
 		function showList() {
-			var table = document.getElementById("table1");
-			var length = vc.getNumOfProducts();
+			var table = document.getElementById("showtable");
+			var length = vc.getNumOfProducts(); // 스마트 컨트랙트 관련 부분
 
 			// // 원래 테이블 지우기
 			// // $('#table').remove();
-			let Parent = document.getElementById("table1");
+			let Parent = document.getElementById("showtable");
 			while (Parent.hasChildNodes()) {
 				Parent.removeChild(Parent.firstChild);
 			}
 
 			for (var i = 0; i < length; i++) {
-				var candidate = vc.getProductString(i);
+				var candidate = vc.getProductString(i); // 스마트 컨트랙트 관련 부분
 				var row = table.insertRow();
 				var cell1 = row.insertCell(0);
 				var cell2 = row.insertCell(1);
@@ -75,18 +76,21 @@
                 console.log(web3.toWei(0.1, 'ether'))
 
                 // 2. 트랙잭션 데이터 생성
-                const EthereumTx = require('ethereumjs-tx').Transaction
+                // const EthereumTx = require('ethereumjs-tx').Transaction require.js 때문인지 빼고 실행함
                 const txParams = {
                     nonce: web3.toHex(nonce),
                     to: toAddress,
                     value: web3.toHex(web3.toWei(0.1, 'ether')), // 0.1 이더
                     gasPrice: web3.toHex(web3.toWei(1, 'Gwei')), // 가스 가격(Gwei 단위)
                     gasLimit: web3.toHex(300000), // 가스 최대 사용량
-                    data: '0Xc0de'
+                    data: document.getElementById("did").value
                     // EIP 155 chainId - mainnet: 1, ropsten: 3
                     // chainId: 3 //네트워크 ID(3=Ropsten Tesetnet) 
                 }
-                const tx = new EthereumTx(txParams)
+                // const tx = new EthereumTx(txParams) 마찬가지로 빼고 아래 문장처럼 실행함
+                let tx = new ethereumjs.Tx(txParams)
+
+                console.log(tx)
 
                 // 3. 트랜잭션 서명
                 let privateKey = new ethereumjs.Buffer.Buffer('713698cbaf055c391e612b736f39bfa8cc6c345a4f196450b15a72b01fa8ada2','hex')
@@ -94,25 +98,36 @@
 
                 // 4. 트랜잭션 전송하기
                 const serializedTx = '0x' + tx.serialize().toString('hex')
-                web3.eth.sendRawTransaction(serializedTx, function(err, txId) {
-                    if (!err) {
-                        console.log('txId: ', txId) // 전송된 트랜잭션 Hash값
-                    }
-                })
+
+                if (web3.personal.unlockAccount(fromAddress, document.getElementById('pass').value)) {
+                    vc.addTransaction(serializedTx, { from: fromAddress, gas: 2000000 }, function (err, result) { // 스마트 컨트랙트 관련 부분
+                        if (!err) alert("트랜잭션이 성공적으로 전송되었습니다. \n" + result) // 이 문구가 떠도 마이닝 이전이면 체인상에 올라가지 않음 그러나, 트랜잭션 hash 값은 마이닝 되기 전에 볼 수 있음.(txpool에 올린 상태이므로)
+                        {
+                            console.log('txId: ', result) // 트랜잭션 Hash값
+                        }
+                    })
+
+                    // sendTransaction()은 지갑이나 하드디스크, 메타마스크 같이 외부에서 private key관리하는 경우
+                    // sendRawTransaction()은 DApp에서 private key관리하는 경우 / ethereumjs-tx 를 사용해 privateKey, transaction 을 서명해서 전송한다.
+                    // web3.eth.sendRawTransaction(serializedTx, function(err, txId) {
+                    //     if (!err) {
+                    //         console.log('txId: ', txId) // 전송된 트랜잭션 Hash값
+                    //     }
+                    // })
+                }           
             })
         }
 
-		function addProduct() {
-			var candidate = document.getElementById("did").value;
-			var account = document.getElementById("fromAddress").value;
-			if (web3.personal.unlockAccount(account, document.getElementById('pass').value)) {
-				vc.addProduct(candidate, { from: account, gas: 2000000 }, function (err, result) {
-					if (!err) alert("트랜잭션이 성공적으로 전송되었습니다. \n" + result)
-				});
-			}
-        }        
-        
-    // })
+        // 참고 함수(농산물 이력 관리 프로그램 만들 때 사용한 함수)
+		// function addProduct() {
+		// 	var candidate = document.getElementById("did").value;
+		// 	var account = document.getElementById("fromAddress").value;
+		// 	if (web3.personal.unlockAccount(account, document.getElementById('pass').value)) {
+		// 		vc.addProduct(candidate, { from: account, gas: 2000000 }, function (err, result) {
+		// 			if (!err) alert("트랜잭션이 성공적으로 전송되었습니다. \n" + result)
+		// 		})
+		// 	}
+        // }        
     </script>
   </head>
   
@@ -130,7 +145,7 @@
         <input type="text" id="did" value="did_name">
         <button onClick="addTransaction()">등록</button>
     </div>
-    <table id="table1">
+    <table id="showtable">
         <script>
             showList();
         </script>

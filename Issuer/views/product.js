@@ -15,6 +15,20 @@ var abi = [
     },
     {
         constant: false,
+        inputs: [
+            {
+                name: 'pro',
+                type: 'string',
+            },
+        ],
+        name: 'addTransaction',
+        outputs: [],
+        payable: false,
+        stateMutability: 'nonpayable',
+        type: 'function',
+    },
+    {
+        constant: false,
         inputs: [],
         name: 'killContract',
         outputs: [],
