@@ -33,7 +33,7 @@
             exit
         }
             
-        var contractAddress = "0x9c412e6e52f55c466c3635696f319bd52e2efdbd";
+        var contractAddress = "0xb6b92aaa5d02db09912edd6c5e33864a16d11c51";
         var vc = web3.eth.contract(abi).at(contractAddress);
 
 		let listevent = vc.Instructor();  // // smartContract value = Coursetro.Instructor() , event define
@@ -82,7 +82,18 @@
                     value: web3.toHex(web3.toWei(0.1, 'ether')), // 0.1 이더
                     gasPrice: web3.toHex(web3.toWei(1, 'Gwei')), // 가스 가격(Gwei 단위)
                     gasLimit: web3.toHex(300000), // 가스 최대 사용량
-                    data: document.getElementById("did").value // 인증할 did를 트랜잭션 data 필드에 넣음 
+                    data: document.getElementById("did").value, // 인증할 did를 트랜잭션 data 필드에 넣음
+                    // EIP 155 chainId - mainnet: 1, ropsten: 3
+                    // chainId: 3 //네트워크 ID(3=Ropsten Tesetnet) 
+                }
+
+                const txParams2 = {
+                    nonce: web3.toHex(nonce),
+                    to: toAddress,
+                    value: web3.toHex(web3.toWei(0.1, 'ether')), // 0.1 이더
+                    gasPrice: web3.toHex(web3.toWei(1, 'Gwei')), // 가스 가격(Gwei 단위)
+                    gasLimit: web3.toHex(300000), // 가스 최대 사용량
+                    data: document.getElementById("did").value, // 인증할 did를 트랜잭션 data 필드에 넣음
                     // EIP 155 chainId - mainnet: 1, ropsten: 3
                     // chainId: 3 //네트워크 ID(3=Ropsten Tesetnet) 
                 }
