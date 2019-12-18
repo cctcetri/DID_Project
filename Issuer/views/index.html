@@ -10,7 +10,6 @@
     <script type="text/javascript" src="../lib/bignumber.min.js"></script>
     <script type="text/javascript" src="../public/js/ethereumjs-tx.js"></script>
     <script type="text/javascript" src="../privateKeystore/issuer1/IS1_privatekey.js"></script>
-
     
     <script type="text/javascript">
     // 이 밑 2줄은 body 부분을 먼저 읽고 올라오라는 의미 이 코드상에서 이 2줄을 사용하면 오류! showList() 함수 정의가 헤드 부분에 있기 때문!
@@ -34,7 +33,7 @@
             exit
         }
             
-        var contractAddress = "0xb6b92aaa5d02db09912edd6c5e33864a16d11c51";
+        var contractAddress = "0xc0248a45baa4eb52f3f80a3d82e5117ffd9d9b24";
         var vc = web3.eth.contract(abi).at(contractAddress);
 
 		let listevent = vc.Instructor();  // // smartContract value = Coursetro.Instructor() , event define
@@ -104,7 +103,7 @@
                 console.log(tx)
 
                 // 3. 트랜잭션 서명
-                let privateKey = new ethereumjs.Buffer.Buffer('713698cbaf055c391e612b736f39bfa8cc6c345a4f196450b15a72b01fa8ada2','hex') // aes로 암호화한 private key (cypher text 부분)
+                let privateKey = new ethereumjs.Buffer.Buffer('d52d9d5380308116420e0f178bb52b00df45d029051345816e456427f0b10259','hex') // aes로 암호화한 private key (cypher text 부분)
                 tx.sign(privateKey)
 
                 // 4. 트랜잭션 전송하기
@@ -147,10 +146,10 @@
     <h1>did 등록</h1>
     <div>
         계 정:
-        <input type="text" size="45" id="fromAddress" value="0xf912eab5d7cfcb3f762ca5f53c057ca360b9dc45">
+        <input type="text" size="45" id="fromAddress" value="0xeca470ac517b2c1e78653071c890c6c76bc02d3a">
         <p></p>
         패스워드:
-        <input type="password" id="pass" value="123">
+        <input type="password" id="pass" value="1234">
     </div>
     <br>
     <div>

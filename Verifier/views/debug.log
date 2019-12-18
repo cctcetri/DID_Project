@@ -461,3 +461,9 @@
 [1212/015959.789:ERROR:process_info.cc(359)] UncheckedAllocate
 [1212/020013.187:ERROR:process_info.cc(359)] UncheckedAllocate
 [1212/024101.486:ERROR:process_info.cc(359)] UncheckedAllocate
+[1218/114121.169:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1218/114121.171:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1218/114121.171:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1218/114121.172:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1218/114121.172:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1218/114121.172:ERROR:crash_report_database_win.cc(469)] failed to stat report
