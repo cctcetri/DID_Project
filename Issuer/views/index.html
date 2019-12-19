@@ -87,6 +87,7 @@
                     // chainId: 3 //네트워크 ID(3=Ropsten Tesetnet) 
                 }
 
+                // 이런식으로 트랜잭션을 추가할 수 있습니다. did 서명 받을 목록이 늘어나면 트랜잭션 함수를 추가해줍니다.
                 const txParams2 = {
                     nonce: web3.toHex(nonce),
                     to: toAddress,
